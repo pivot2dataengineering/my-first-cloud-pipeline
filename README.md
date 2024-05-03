@@ -46,12 +46,17 @@ Connect your code to github and share your work with others.
 1. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
 
 ### In the VSCode terminal:
+1. First we want to clone the repository from github. To clone the repo, open the folder that you would want the repository folder created in and open a terminal. In the terminal, type in ```git clone https://github.com/pivot2dataengineering/my-first-cloud-pipeline.git```
+2. Now in the top left bar in VSCode, click File and Open Folder and point it to the newly created repository folder.
+3. Verify that your terminal prompt has "my-first-cloud-pipeline" at the end like so: d```C:\projects_folder\my-first-cloud-pipeline>```
 1. Type in 
 ```gcloud init ```
 2. Select 
 ```[1] Re-initialize this configuration ```
 3. Select the correct account
 4. Select the cloud project to use
+5. Sign in with google cloud code at the bottom of the screen
+![cloud_icon](artifacts/cloud_code.png)
 5. Create a virtual environment by typing ```python -m venv .venv ```
 6. Activate the virtual environment by typing ```cd .venv/scripts/activate```
 7. Install the required packages by typing ```pip install -r requirements.txt ```
@@ -61,6 +66,9 @@ Connect your code to github and share your work with others.
 8. Check in Bigquery console that the data has been uploaded and delete the table.
 9. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
 10. Check Bigquery and confirm the data has been updated.
+
+### In Web Browser (Grafana cloud)
+11. Head over to Grafana cloud
 11. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
 
 

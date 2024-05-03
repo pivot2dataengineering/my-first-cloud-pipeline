@@ -1,9 +1,10 @@
 import pandas_gbq
 import pandas as pd
-
+import pandas_gbq
+import pydata_google_auth
 
 # TODO: Set the project ID
-project_id="my-data-pipelines-422215"
+project_id="my-first-cloud-data-pipeline"
 
 # TODO: Set the dataset ID
 dataset_id="weather_data"
@@ -25,6 +26,22 @@ def upload_to_gbq(df: pd.DataFrame,
                   table_id: str = table_id,
                   table_schema: list = table_schema):
 
+
+    SCOPES = [
+        'https://www.googleapis.com/auth/cloud-platform',
+        'https://www.googleapis.com/auth/drive',
+    ]
+
+    credentials = pydata_google_auth.get_user_credentials(
+        SCOPES,
+        # Note, this doesn't work if you're running from a notebook on a
+        # remote sever, such as over SSH or with Google Colab. In those cases,
+        # install the gcloud command line interface and authenticate with the
+        # `gcloud auth application-default login` command and the `--no-browser`
+        # option.
+        auth_local_webserver=True,
+    )
+
     pandas_gbq.to_gbq(
             dataframe=df,
             project_id=project_id,
@@ -32,6 +49,7 @@ def upload_to_gbq(df: pd.DataFrame,
             if_exists='append',   # 'replace'
             table_schema=table_schema,
             progress_bar=True,
+            credentials=credentials,
            )
 
 if __name__ == '__main__':
