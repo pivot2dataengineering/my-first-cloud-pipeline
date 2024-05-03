@@ -1,0 +1,71 @@
+# My First Pipeline - Read Me First!
+## Overview
+In this project, we will cover the basics of a pipeline by covering the 3 parts of Extract, Transform and Load in its most basic fashion. All the tools covered in this project is 100% free to use.
+
+### Phase 1 - Extract
+Using Python locally to query data programatically from the WeatherAPI.
+### Phase 2 - Transform
+Using Python to transform the data, organising it so its ready to be loaded into a structured data warehouse such as Bigquery or a database such as SQL server.
+### Phase 3 - Load
+Using Python, we will load the data into Bigquery.
+### Phase 4 - Visualise
+Using Grafana cloud, we can visualise the data by querying the data in Bigquery.
+### Phase 5 - Publish your First Project
+Connect your code to github and share your work with others. 
+<b>Be sure to not upload your API keys or secrets to github.</b>
+
+### Technologies used
+1. [Python](https://www.python.org/) - as this is the most common choice for Data Engineering at the moment.
+2. [WeatherAPI](https://www.weatherapi.com/signup.aspx) - the free plan allows access to historical weather data for the last 5 days.
+3. [Bigquery](https://cloud.google.com/bigquery/) - Bigquery [sandbox](https://cloud.google.com/bigquery/docs/sandbox#limits) lets you explore limited BigQuery capabilities at no cost to confirm whether BigQuery fits your needs. The BigQuery sandbox lets you experience BigQuery <b>without providing a credit card or creating a billing account for your project</b>. If you already created a billing account, you can still use BigQuery at no cost in the free usage tier.
+4. [Grafana](https://grafana.com/products/cloud/) - sign up for the free forever plan
+
+## Pre-requisites
+1. Create a free [google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp/)
+2. Install Python (latest stable version)
+2. Install Git (latest stable version)
+3. Install Visual Studio Code (latest stable version)
+4. Install Google Cloud SDK (latest stable version)
+5. In VSCode, click on the "Extensions" button on the left menu bar and install the following extensions:
+    1. Google Cloud Code
+    2. autopep8
+    3. PowerShell
+    4. Python
+    5. TODO Highlight
+6. Go to [WeatherAPI](https://www.weatherapi.com/signup.aspx) and sign up for a free 14-day trial. This will revert to a free membership after the 14 days so there's nothing to worry about.
+7. Go to [Bigquery](https://console.cloud.google.com/bigquery) and sign in with your Google account.
+8. Go to [Grafana](https://grafana.com/products/cloud/) and sign up for a free.
+
+## Steps
+### In Web Browser (Bigquery):
+1. Upon entry of [Bigquery](https://console.cloud.google.com/bigquery), you will be prompted to create a new project. Create one and give it a meaningful name (e.g: my-data-pipeline). You will be coming back to this project in future steps.
+2. Select the desired project (eg: my-data-pipeline)
+3. Create a dataset (eg: weather-data)
+
+### In Web Browser (WeatherAPI):
+1. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
+
+### In the VSCode terminal:
+1. Type in 
+```gcloud init ```
+2. Select 
+```[1] Re-initialize this configuration ```
+3. Select the correct account
+4. Select the cloud project to use
+5. Create a virtual environment by typing ```python -m venv .venv ```
+6. Activate the virtual environment by typing ```cd .venv/scripts/activate```
+7. Install the required packages by typing ```pip install -r requirements.txt ```
+5. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
+6. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
+7. Press play on <i>load.py</i> or in the console type ```python load.py``` - This should load some dummy data in bigquery
+8. Check in Bigquery console that the data has been uploaded and delete the table.
+9. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
+10. Check Bigquery and confirm the data has been updated.
+11. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
+
+
+
+
+
+
+
