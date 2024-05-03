@@ -56,20 +56,24 @@ Connect your code to github and share your work with others.
 3. Select the correct account
 4. Select the cloud project to use
 5. Sign in with google cloud code at the bottom of the screen
+
 ![cloud_icon](artifacts/cloud_code.png)
-5. Create a virtual environment by typing ```python -m venv .venv ```
-6. Activate the virtual environment by typing ```cd .venv/scripts/activate```
-7. Install the required packages by typing ```pip install -r requirements.txt ```
-5. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
-6. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
-7. Press play on <i>load.py</i> or in the console type ```python load.py``` - This should load some dummy data in bigquery
-8. Check in Bigquery console that the data has been uploaded and delete the table.
-9. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
-10. Check Bigquery and confirm the data has been updated.
+
+6. Create a virtual environment by typing ```python -m venv .venv ```
+7. Activate the virtual environment by typing ```cd .venv/scripts/activate```
+8. Install the required packages by typing ```pip install -r requirements.txt ```
+9. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
+10. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
+11. Press play on <i>load.py</i> or in the console type ```python load.py``` - It might open up a browser for you to sign in with your google login once again.This should load some dummy data in bigquery.
+12. Check in Bigquery console that the data has been uploaded and delete the table.
+13. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
+14. Check Bigquery and confirm the data has been updated.
 
 ### In Web Browser (Grafana cloud)
-11. Head over to Grafana cloud
-11. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
+15. Head over to Grafana cloud
+16. Follow the instructions to connect to Bigquery and create a dashboard
+17. Spend hours getting the graph to look good and step back and be proud!
+18. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
 
 
 
