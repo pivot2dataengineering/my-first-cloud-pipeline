@@ -1,4 +1,5 @@
 # My First Pipeline - Read Me First!
+![Public Dashboard](artifacts/grafana_public_dashboard.png)
 ## Overview
 In this project, we will cover the basics of a pipeline by covering the 3 parts of Extract, Transform and Load in its most basic fashion. All the tools covered in this project is 100% free to use.
 
@@ -85,6 +86,7 @@ SELECT
 FROM `my-first-cloud-data-pipeline.weather_data.melbourne_weather_table`
 ```
 18. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
+
 
 
 
