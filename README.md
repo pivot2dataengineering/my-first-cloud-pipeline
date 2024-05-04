@@ -1,4 +1,4 @@
-# My First Pipeline - Read Me First!
+# IMPORTANT - Read Me First!
 ![Public Dashboard](artifacts/grafana_public_dashboard.png)
 ## Overview
 In this project, we will cover the basics of a pipeline by covering the 3 parts of Extract, Transform and Load in its most basic fashion. All the tools covered in this project is 100% free to use.
