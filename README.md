@@ -61,12 +61,14 @@ Connect your code to github and share your work with others.
 8. Install the required packages by typing ```pip install -r requirements.txt ```
 ### In Web Browser (WeatherAPI):
 9. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
+### In the VSCode terminal:
 10. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
 11. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
 12. Press play on <i>load.py</i> or in the console type ```python load.py``` - It might open up a browser for you to sign in with your google login once again.This should load some dummy data in bigquery.
 13. Check in Bigquery console that the data has been uploaded and delete the table.
 14. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
-15. Check Bigquery and confirm the data has been updated.
+### In Web Browser (Bigquery):
+15. Refresh Bigquery and confirm the data has been updated.
 
 ### In Web Browser (Grafana cloud)
 16. Head over to Grafana cloud and follow the instructions to connect to Bigquery and create a dashboard
