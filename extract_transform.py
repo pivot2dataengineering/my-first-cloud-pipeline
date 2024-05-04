@@ -7,15 +7,15 @@ import json
 # Load environment variables from .env file.
 # My API key is held in a file named ".env", I use load_dotenv to pull the variable in for me
 # This allows me to share working code on Github without exposing my actual API Key
-load_dotenv()
-API_KEY = os.getenv("API_KEY")
+# load_dotenv()
+# API_KEY = os.getenv("API_KEY")
 
 
 ### MAKING REST API CALL TO GET DATA
 
 # Replace YOUR_API_KEY with your actual API key
 # TODO: REPLACE API KEY FROM https://www.weatherapi.com/my/
-# API_KEY = "ENTER_API_KEY_HERE"  # eg: API_KEY = "12343abb334sa"
+API_KEY = "ENTER_API_KEY_HERE"  # eg: API_KEY = "12343abb334sa"
 
 
 def get_weather_data(start_date: str,
@@ -72,7 +72,7 @@ def parse_weather_data(data: json,
             # Append the weather data to the list
             weather_data.append(
                 {
-                    "DATE": date,
+                    "DATE": date, 
                     "MAX_TEMP": max_temp,
                     "MIN_TEMP": min_temp,
                     "AVG_TEMP": avg_temp,
@@ -82,6 +82,7 @@ def parse_weather_data(data: json,
 
         # Create a Pandas DataFrame from the weather data list
         weather_df = pd.DataFrame(weather_data)
+        weather_df["DATE"] = pd.to_datetime(weather_df['DATE'], format='%Y-%m-%d')
 
         # Print the DataFrame
         print(weather_df)

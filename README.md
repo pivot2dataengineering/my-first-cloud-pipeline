@@ -55,7 +55,7 @@ Connect your code to github and share your work with others.
 ```[1] Re-initialize this configuration ```
 3. Select the correct account
 4. Select the cloud project to use
-5. Sign in with google cloud code at the bottom of the screen
+5. Sign in with google cloud code at the bottom of the screen within VSCode
 
 ![cloud_icon](artifacts/cloud_code.png)
 
@@ -72,7 +72,18 @@ Connect your code to github and share your work with others.
 ### In Web Browser (Grafana cloud)
 15. Head over to Grafana cloud
 16. Follow the instructions to connect to Bigquery and create a dashboard
-17. Spend hours getting the graph to look good and step back and be proud!
+17. This will involve creating a Service Account in google cloud to enable Grafana to access Bigquery
+18. Once you tested your connection and its working, head over to dashboard and create your first dashboard and use the following SQL script.
+
+```SQL
+SELECT
+  CAST(DATE AS TIMESTAMP) AS TIMESTAMP,
+  MAX_TEMP,
+  MIN_TEMP,
+  AVG_TEMP,
+  TOTAL_PRECIPITATION
+FROM `my-first-cloud-data-pipeline.weather_data.melbourne_weather_table`
+```
 18. Chill out and pat yourself on the back for creating your first Cloud Data Pipeline.
 
 
