@@ -42,9 +42,6 @@ Connect your code to github and share your work with others.
 2. Select the desired project (eg: my-data-pipeline)
 3. Create a dataset (eg: weather-data)
 
-### In Web Browser (WeatherAPI):
-1. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
-
 ### In the VSCode terminal:
 1. First we want to clone the repository from github. To clone the repo, open the folder that you would want the repository folder created in and open a terminal. In the terminal, type in ```git clone https://github.com/pivot2dataengineering/my-first-cloud-pipeline.git```
 2. Now in the top left bar in VSCode, click File and Open Folder and point it to the newly created repository folder.
@@ -62,16 +59,17 @@ Connect your code to github and share your work with others.
 6. Create a virtual environment by typing ```python -m venv .venv ```
 7. Activate the virtual environment by typing ```cd .venv/scripts/activate```
 8. Install the required packages by typing ```pip install -r requirements.txt ```
-9. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
-10. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
-11. Press play on <i>load.py</i> or in the console type ```python load.py``` - It might open up a browser for you to sign in with your google login once again.This should load some dummy data in bigquery.
-12. Check in Bigquery console that the data has been uploaded and delete the table.
-13. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
-14. Check Bigquery and confirm the data has been updated.
+### In Web Browser (WeatherAPI):
+9. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
+10. Search for TODO tags in <i>extract_transform.py, load.py </i> & <i>main.py</i> and replace accordingly.
+11. Press play on <i>extract_transform.py</i> or in the console type ```python extract_transform.py``` - This is print out a tidy table of weather data
+12. Press play on <i>load.py</i> or in the console type ```python load.py``` - It might open up a browser for you to sign in with your google login once again.This should load some dummy data in bigquery.
+13. Check in Bigquery console that the data has been uploaded and delete the table.
+14. Press play on <i>main.py</i> or in the console type ```python main.py```. This will update the weather data for the date range entered into Bigquery.
+15. Check Bigquery and confirm the data has been updated.
 
 ### In Web Browser (Grafana cloud)
-15. Head over to Grafana cloud
-16. Follow the instructions to connect to Bigquery and create a dashboard
+16. Head over to Grafana cloud and follow the instructions to connect to Bigquery and create a dashboard
 17. This will involve creating a Service Account in google cloud to enable Grafana to access Bigquery
 18. Once you tested your connection and its working, head over to dashboard and create your first dashboard and use the following SQL script.
 
