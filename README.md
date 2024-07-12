@@ -58,7 +58,7 @@ Connect your code to github and share your work with others.
 ![cloud_icon](artifacts/cloud_code.png)
 
 6. Create a virtual environment by typing ```python -m venv .venv ```
-7. Activate the virtual environment by typing ```cd .venv/scripts/activate```
+7. Activate the virtual environment by typing ```.venv/scripts/activate```
 8. Install the required packages by typing ```pip install -r requirements.txt ```
 ### In Web Browser (WeatherAPI):
 9. Go to [WeatherAPI](https://www.weatherapi.com/my/) and copy your API key. Replace the API key with your own API key in line 18 of extract_transform.py
